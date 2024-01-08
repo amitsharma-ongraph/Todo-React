@@ -7,13 +7,13 @@ function Navbar() {
     <div className="Navbar">
       <div className="nav">
         <div className="logo-cont">
-          <img className="logo" src={logo} />
+          <img className="logo" src={logo} alt="Todo" />
         </div>
         <div className="text-logo">
           <h2>Todo-App</h2>
         </div>
         <div className="user-info-btn">
-          <img src={userIcon} className="user-icon"/>
+          <img src={userIcon} className="user-icon" alt="User"/>
         </div>
       </div>
       <div className="user-info">

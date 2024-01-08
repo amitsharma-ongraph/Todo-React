@@ -4,22 +4,25 @@ import bodyParser from "body-parser";
 import connectDb from "./database.js";
 import authRouter from "./Routes/authRoutes.js";
 import todoRouter from "./Routes/todoRoutes.js";
-import users from "./models/userModel.js"
+import cors from "cors"
+
 
 dotenv.config();
 
 const port = process.env.PORT;
-
+ 
 const app = express();
-
+ 
 //middlewares
 app.use(bodyParser.json());
+app.use(cors()); 
+
 
 //routes
 app.use("/api/auth",authRouter);
 app.use("/api/todo",todoRouter);
 app.get("/", (req, res) => {
-    res.send("hey!")
+    res.send("hey!")  
 })
 
 connectDb().then(() => {

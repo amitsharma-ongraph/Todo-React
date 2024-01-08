@@ -7,9 +7,13 @@ dotenv.config();
 
 export const  loginController=async (req,res)=>{
     const {email,password}=req.body;
+    console.log("email",email);
+    console.log("password",password);
     const user=await userModel.findOne({email});
+    console.log(user)
+    console.log("user:",user)
     if(!user){
-        res.status(500).send({
+        return res.status(500).send({
             success:false,
             message:"User doesn't exists"
         })
@@ -24,7 +28,7 @@ export const  loginController=async (req,res)=>{
         })
     }
     else{
-        res.status(500).send({
+        return res.status(500).send({
             success:false,
             message:"Incorrect Password"
         })

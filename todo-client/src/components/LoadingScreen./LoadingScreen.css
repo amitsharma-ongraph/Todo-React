@@ -1,0 +1,15 @@
+.loading-cont{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-text{
+  transition: 4s;
+  font-size: 1.5em;
+  color:#aaaaa0;
+}
+.loading-text:focus-visible{
+    font-size: 2em;
+}
